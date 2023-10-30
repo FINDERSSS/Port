@@ -1,319 +1,154 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Find's Portfolio Website</title>
+<html lang="en">
 
-  <meta property="og:title" content="Find's Portfolio Website">
-    <meta property="og:description" content="This is Find's Portfolio with all of my images for modeling and games for scripting!">
-    <meta property="og:image" content="https://ibb.co/wLdcpYf">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finders Portfolio</title>
+
+    <meta property="og:title" content="Finders Portfolio">
+    <meta property="og:description" content="Explore Finders Portfolio of game development!">
+    <meta property="og:image" content="https://ibb.co/mctrSC2">
     <meta property="og:url" content="https://findersss.github.io/Port/">
     <meta property="og:type" content="website">
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+    <style>
+        body {
+            font-family: 'Bubblegum Sans', cursive;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #fff;
+            color: #3498db;
+        }
 
-    body {
-      font-family: 'Concert One', Arial, sans-serif;
-      background-color: #000000;
-      margin: 0;
-      padding: 0;
-      color: #ffffff;
-    }
+        header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-    header {
-      background-color: #333;
-      padding: 20px;
-      text-align: center;
-    }
+        #title-text {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+        section {
+            padding: 2em;
+        }
 
-    h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
+        h1, h2, h3 {
+            color: #3498db;
+        }
 
-    h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-    p {
-      font-size: 16px;
-      line-height: 1.5;
-      margin-bottom: 10px;
-    }
+        li {
+            margin-bottom: 0.5em;
+        }
 
-    .showcase-item,
-    .pricing-item {
-      background-color: #333333;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-      padding: 20px;
-    }
+        .talent {
+            margin-bottom: 2em;
+        }
 
-    .fade-in {
-      animation: fadeInAnimation 1s ease-in-out forwards;
-    }
+        .talent img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 1em;
+        }
 
-    @keyframes fadeInAnimation {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    .renders {
-      background-color: #333333;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-      padding: 20px;
-    }
-
-    .renders h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .renders p {
-      font-size: 16px;
-      line-height: 1.5;
-      margin-bottom: 10px;
-    }
-
-    .renders img {
-      max-width: 100%;
-      margin-bottom: 10px;
-    }
-
-    .scroll-button {
-      display: inline-block;
-      background-color: #333;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-right: 10px;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-    }
-
-    .scroll-button:hover {
-      background-color: #555;
-    }
-
-    body {
-      background-color: #555555;
-      color: #ffffff;
-      transition: background-color 0.3s ease;
-    }
-
-    .mode-switch {
-     font-family: 'Concert One', Arial, sans-serif;  
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      cursor: pointer;
-      font-size: 16px;
-      z-index: 999;
-      background-color: #252525;
-      color: #ffffff;
-      border: none;
-      border-radius: 20px;
-      padding: 8px 16px;
-      outline: none;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .dark-mode {
-      background-color: #000000;
-      color: #ffffff;
-    }
-
-    .light-mode {
-      background-color: #ffffff;
-      color: #000000;
-    }
-
-  </style>
+        footer {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+            position: relative;
+            width: 100%;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <h1>Find's Portfolio</h1>
-    <div>
-      <button class="scroll-button" onclick="scrollToSection('showcases')">Showcases</button>
-      <button class="scroll-button" onclick="scrollToSection('renders')">Renders</button>
-      <button class="scroll-button" onclick="scrollToSection('pricing')">Pricing</button>
-    </div>
-  </header>
 
-  <div class="container">
-    <section id="about" class="fade-in">
-      <h2>About Me</h2>
-      <p>I am a professional programmer/scripter with over 8 years of experience, i also started to model in "Roblox Studio" but moved to blender around 5 months ago. i love to make games and model assets so if you would like my help let me know!</p>
-      <p>Discord: finddoesprogramming or display name: Programmer_Find</p>
+    <header>
+        <div id="title-text">Finders Portfolio</div>
+        <h2>Konnor / FINDER</h2>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I consider myself a decent scripter and programmer with 7 years of experience in multiple coding languages. I like to use my knowledge to help others. My goal is to:</p>
+        <ul>
+            <li>Create complex/basic coding for assigned tasks.</li>
+            <li>Implement innovative gameplay mechanics.</li>
+            <li>Optimize performance for all players to enjoy.</li>
+            <li>Create fun and interactive systems throughout the project.</li>
+            <li>MUST READ: I do not tolerate scamming. I also provide high-quality work and do not accept projects of extremely low quality!</li>
+        </ul>
+        <p>Check out my work:</p>
+        <ul>
+            <li><a href="https://www.roblox.com/games/14216139457/Finds-scripting-test-place-Chasing-Npc">https://www.roblox.com/games/14216139457/Finds-scripting-test-place-Chasing-Npc</a></li>
+            <li><a href="https://www.roblox.com/games/14377255272/BETA-TEST-sooner">https://www.roblox.com/games/14377255272/BETA-TEST-sooner</a></li>
+            <li><a href="https://www.roblox.com/games/9847627870/SPRINT-Donation-Simulator">https://www.roblox.com/games/9847627870/SPRINT-Donation-Simulator</a></li>
+        </ul>
     </section>
 
-    <section id="showcases" class="fade-in">
-      <h2>Showcases</h2>
-      <div class="showcase-item">
-        <h2>MAIN SHOWCASE FOR CODING!</h2>
-        <p>CHECK THIS ONE OUT BEFORE ANY OTHERS THIS ONCE IS MY MOST RECENT! <a href="https://www.roblox.com/games/14377255272/sooner">https://www.roblox.com/games/14377255272/sooner</a></p>
-      </div>
-      <div class="showcase-item">
-        <h2>Pet Clickers!</h2>
-        <p>An old game I made that got around 150k+ visits. I was revamping it but moved on to better projects. <a href="https://www.roblox.com/games/5715133262/RE-OPEN-Pet-Clickers">https://www.roblox.com/games/5715133262/RE-OPEN-Pet-Clickers</a></p>
-      </div>
-      <div class="showcase-item">
-        <h2>Gun System</h2> 
-        <p>Just a small simple gun system I made in my free time. Feel free to check it out. <a href="https://www.roblox.com/games/9832137790/First-person-shooting">https://www.roblox.com/games/9832137790/First-person-shooting</a></p>
-      </div>
-      <div class="showcase-item">
-        <h2>Roblox Profile Creations</h2>
-        <p>Here you can check out all of the other creations I have on my Roblox profile. Not all of them are good, but if you need more proof, just ask me to make anything you could need and I will do so! <a href="https://www.roblox.com/users/1198999038/profile#!/creations">https://www.roblox.com/users/1198999038/profile#!/creations</a></p>
-      </div>
+    <section id="secondary-talents">
+        <h2>Secondary Professions</h2>
+
+        <div class="talent">
+            <h3>UI Design</h3>
+            <p>2 months of experience in UI Design. Take a look at some of my UI below:</p>
+            <img src="https://i.ibb.co/TKx0QtY/image2.png" alt="image2" border="0">
+        </div>
+
+        <div class="talent">
+            <h3>3D Modeling</h3>
+            <p>7 months of experience in Blender 3D Modeling. Check out some of my models below:</p>
+            <img src="https://i.ibb.co/WDhG3Zk/piller.png" alt="piller" border="0" />
+            <img src="https://i.ibb.co/9nMwv8w/ToolsLol.png" alt="ToolsLol" border="0" />
+            <img src="https://i.ibb.co/M5J5Q4j/Rocky-Portal.png" alt="Rocky-Portal" border="0" />
+        </div>
     </section>
 
-    <section id="renders" class="fade-in">
-      <h2>Renders (Top are the most recent) "downloading any of these images notifys me and you will have action taken if used as something of your own"</h2>
-      
-      <div class="renders">
-        <h2>Piller i made for someone!</h2>
-        <p>A detailed low poly piller (15 minutes)</p>
-        <a href="https://ibb.co/RhFYSf3"><img src="https://i.ibb.co/FsrmW25/piller.png" alt="piller" border="0"></a>
-      </div>
-      <div class="renders">
-        <h2>Small Speed Boat With Storage! (also the lighting sucks sorry)</h2>
-        <p>Just a simple boat i did not make the fan thing behind it (the back part is the seat and the things on the side you can like store stuff in) (10 minutes)</p>
-        <a href="https://ibb.co/Ks9ZRtx"><img src="https://i.ibb.co/QH6BzWv/Boat-Front.png" alt="Boat-Front" border="0"></a>
-      </div>
-      <div class="renders">
-        <h2>Low Poly Tree's (took the pictures in roblox studio because i closed out blender not thinking)</h2>
-        <p>i made a low poly pine tree and what ever the other one is lol (each took about 5 - 7 minutes)</p>
-        <a href="https://imgbb.com/"><img src="https://i.ibb.co/hmJtPVy/pinetree.png" alt="pinetree" border="0"></a>
-        <a href="https://imgbb.com/"><img src="https://i.ibb.co/S6ZD8m6/weirdtree.png" alt="weirdtree" border="0"></a>
-      </div>
-      <div class="renders">
-        <h2>Simple Gear</h2>
-        <p>Made For Fun (5 minutes)</p>
-        <a href="https://ibb.co/M9WFZ4s"><img src="https://i.ibb.co/CWNRmZz/GearIcon.png" alt="GearIcon" border="0"></a>
-      </div>
-      <div class="renders">
-        <h2>Tapping Leaders Gfx</h2>
-        <p>Made for a commission (35 minutes)</p>
-        <a href="https://imgbb.com/"><img src="https://i.ibb.co/qNz2V19/GfxThing.png" alt="GfxThing" border="0"></a>
-      </div>
-      <div class="renders">
-        <h2>Tapping Leaders Logo</h2>
-        <p>Made for a commission (10 minutes)</p>
-        <a href="https://imgbb.com/"><img src="https://i.ibb.co/gvvx69t/New-Project-2.png" alt="New-Project-2" border="0"></a>
-      </div>
-      <div class="renders">
-        <h2>First Logo</h2>
-        <p>Made for a commission (made in idk 10 - 15 minutes "because im new to it")</p>
-        <a href="https://imgbb.com/"><img src="https://i.ibb.co/HYbXw07/New-Pert-Colletoe-Icon.png" alt="New-Pert-Colletoe-Icon" border="0"></a>
-      </div>
-      <div class="renders">
-        <h2>First Gfx</h2>
-        <p>First try at actual gfx (did not keep track of time but prob 15 min)</p>
-        <a href="https://ibb.co/3T3ZMNF"><img src="https://i.ibb.co/Mgv0GV1/Be-Funky-design-3-1.jpg" alt="Be-Funky-design-3-1" border="0"></a>
-      </div>
-      <div class="renders">
-        <h2>Simple Lock</h2>
-        <p>Just a simple lock i made for fun (made in 3 - 5 minutes dont remember)</p>
-        <a href="https://ibb.co/ns2N48D"><img src="https://i.ibb.co/KjZpBz9/lock.png" alt="lock" border="0"></a>
-      </div>
-      <div class="renders">
-        <h2>Space Environment</h2>
-        <p>Made this with a roblox space character standing on a planet looking at another (made in 20 minutes)</p>
-        <a href="https://ibb.co/FD1Kpb7"><img src="https://i.ibb.co/3Cb7Kyh/Space-Scene.png" alt="Space-Scene" border="0" /></a>
-      </div>
-      <div class="renders">
-        <h2>Rocky Portal</h2>
-        <p>Took about 20 min because the transparency was being weird but other than that yea here it is! (btw the time would have been like 10 min but i added lighting and all that stuff to make it look better)</p>
-        <a href="https://ibb.co/84Q4tpR"><img src="https://i.ibb.co/NnGnbPk/Rocky-Portal.png" alt="Rocky-Portal" border="0"></a>
-      </div>
-      <div class="renders">
-        <h2>Tool Pack</h2>
-        <p>Just some tools i made for a commission shovel is eh but other than that its alright.</p>
-        <a href="https://ibb.co/1ZSsnvs"><img src="https://i.ibb.co/8MhzBKz/ToolsLol.png" alt="ToolsLol" border="0"></a>
-      </div>
-      <div class="renders">
-        <h2>Boxing Ring</h2>
-        <p>Small commission i did of a boxing ring with a render of a high and low camera.</p>
-        <a href="https://ibb.co/HxX1y97"><img src="https://i.ibb.co/fnQBWTM/Box-Ring-Lower.png" alt="Box-Ring-Lower" border="0"></a>
-        <a href="https://ibb.co/FnXyywq"><img src="https://i.ibb.co/rv3zz6f/Box-Ring-Upper.png" alt="Box-Ring-Upper" border="0"></a>
-      </div>
-      <div class="renders">
-        <h2>Realistic Rock</h2>
-        <p>Just a simple sort of realistic rock lol</p>
-        <a href="https://ibb.co/1fScd6z"><img src="https://i.ibb.co/27bJsNZ/Realistic-Rock.png" alt="Realistic-Rock" border="0"></a>
-      </div>
-      <div class="renders">
-        <h2>Small Isometric Room</h2>
-        <p>Took like 30 min i did more of the time thinking of what to add then adding and its still not that good lol but anyways here it is!</p>
-        <a href="https://ibb.co/nsPkff2"><img src="https://i.ibb.co/Y70j889/idkhouse.png" alt="idkhouse" border="0"></a>
-      </div>
-      <div class="renders">
-        <h2>Hidden Building</h2>
-        <p>Yea umm the door is bad but yea nvm..</p>
-        <a href="https://ibb.co/HtgLJ36"><img src="https://i.ibb.co/m9zrxgk/The-Door-Is-Bruh.png" alt="The-Door-Is-Bruh" border="0"></a>
-      </div>
-      <div class="renders">
-      <h2>Nothing Else! i will be adding more as i go!</h2>
-      </div>
-      
+    <section id="contact">
+        <h2>Contact and Payment</h2>
+        <p>Email: opinion2050years@gmail.com</p>
+        <p>Discord: finddoesprogramming</p>
+        <p>Roblox Username: Programmer_FIND (@2x2x2xiwillfindyou)</p>
+
+        <h3>Payment Options</h3>
+        <ul>
+            <li>
+                <strong>Cashapp</strong>: $KonnorStan1 / $5 - $500 (Weekly)
+                <br>
+                Info: Depending on the project, I will accept these amounts.
+                Schedule: I'm expecting (Weekly) / (Monthly) payments depending on the project.
+            </li>
+            <li>
+                <strong>Robux</strong>: 500 - 10,000 Robux
+                <br>
+                Info: Depending on the project, I will accept these amounts.
+                Schedule: I'm expecting (Weekly) / (Monthly) payments depending on the project.
+            </li>
+            <li>
+                <strong>FREE</strong>: Completely free
+                <br>
+                Info: Only doing free work for small projects such as smaller Obbies, smaller Simulators, simple game systems.
+            </li>
+        </ul>
     </section>
 
-    <section id="pricing" class="fade-in">
-      <h2>Pricing Scripting</h2>
-      <div class="pricing-item">
-        <h2>Short Term</h2>
-        <p>For commissions for something small that's "short term," depending on what it is, I will charge in the range of [100 - 10,000] Robux.</p>
-      </div>
-      <div class="pricing-item">
-        <h2>Long Term</h2>
-        <p>For full games or for a full-term scripting job, I will charge in the range of [1,000 - 50,000] Robux.</p>
-      </div>
-      <h2>Pricing Modeling</h2>
-      <div class="pricing-item">
-        <h2>Assets</h2>
-        <p>For assets or 3D models depending on the amount, I'll charge in the range of [500 - 250,000] Robux, but most of the time for 1 asset, I do 100 - 1000 Robux.</p>
-      </div>
-      <div class="pricing-item">
-        <h2>Full Models</h2>
-        <p>For a full map or anything just giant like a huge project I'll charge in the range of [10,000 - 1,000,000] Robux, depending on what im asked to create!</p>
-      </div>
-    </section>
-  </div>
-  
-  <body>
-  <button class="mode-switch" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-  
+    <footer>
+        <p>&copy; 2023 finddoesprogramming / FINDER. All rights reserved.</p>
+    </footer>
 
-  <script>
-    function scrollToSection(sectionId) {
-      const section = document.getElementById(sectionId);
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function toggleDarkMode() {
-      const body = document.querySelector('body');
-      const modeSwitch = document.querySelector('.mode-switch');
-
-      if (body.classList.contains('dark-mode')) {
-        body.classList.remove('dark-mode');
-        modeSwitch.textContent = 'Toggle Dark Mode';
-      } else {
-        body.classList.add('dark-mode');
-        modeSwitch.textContent = 'Toggle Light Mode';
-      }
-    }
-  </script>
 </body>
+
 </html>
